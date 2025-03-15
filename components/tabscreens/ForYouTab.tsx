@@ -23,6 +23,12 @@ const DATA = [
     retweeted: {
       username: "Javas Goldsmith",
     },
+    stats: {
+      comments: 29,
+      retweets: 40,
+      likes: 2000,
+      views: 20000,
+    },
   },
   {
     accountName: "Fabrizio Romano",
@@ -36,6 +42,12 @@ const DATA = [
         url: "https://i.sstatic.net/Bhpd8.jpg",
       },
     ],
+    stats: {
+      comments: 10,
+      retweets: 83,
+      likes: 235,
+      views: 4305,
+    },
   },
   {
     accountName: "Harrison A 🎯🎯🎯",
@@ -46,6 +58,12 @@ const DATA = [
     media: [],
     retweeted: {
       username: "Paul Adebiyi",
+    },
+    stats: {
+      comments: 2,
+      retweets: 42,
+      likes: 53000,
+      views: 240000,
     },
   },
   {
@@ -72,6 +90,12 @@ const DATA = [
         url: "https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
       },
     ],
+    stats: {
+      comments: 2903,
+      retweets: 40432,
+      likes: 539000,
+      views: 2023000,
+    },
   },
   {
     accountName: "Instablog9ja",
@@ -92,6 +116,12 @@ const DATA = [
         url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc9APxkj0xClmrU3PpMZglHQkx446nQPG6lA&s",
       },
     ],
+    stats: {
+      comments: 0,
+      retweets: 0,
+      likes: 4,
+      views: 10,
+    },
   },
 ];
 

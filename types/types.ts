@@ -21,10 +21,18 @@ export interface PostData {
   bodyText: string;
   media?: MediaData[];
   retweeted?: RetweetedData;
+  stats: StatsData;
 }
 
 export interface RetweetedData {
   username: string;
+}
+
+export interface StatsData {
+  comments: number;
+  retweets: number;
+  likes: number;
+  views: number;
 }
 
 export interface SingleMediaData {
@@ -43,4 +51,9 @@ export type ScreenTypes = "forYou" | "following" | "chelseaFan" | "default";
 export interface CustomFlatListItemProps {
   listData: PostData;
   screen: string;
+}
+
+export interface MiniStatsProp {
+  icon: any;
+  value?: string;
 }

@@ -13,13 +13,15 @@ import images from "@/constants/images";
 import CustomText from "../CustomText";
 import icons from "@/constants/icons";
 import { floatingColor } from "@/constants/Colors";
-import { PostData, SinglePostData } from "@/types/types";
+import { SinglePostData } from "@/types/types";
 import { truncateUserName } from "@/utils/utils";
 import MediaCard from "./MediaCard";
 import RetweetCard from "./RetweetCard";
+import PostStats from "./PostStats";
 
 const ForYouItem = ({ data }: SinglePostData) => {
-  const { accountName, username, postAt, media, bodyText, retweeted } = data;
+  const { accountName, username, postAt, media, bodyText, retweeted, stats } =
+    data;
 
   const truncatedAccountName = truncateUserName(accountName);
 
@@ -60,6 +62,8 @@ const ForYouItem = ({ data }: SinglePostData) => {
           <CustomText text={bodyText} />
 
           {media && media.length > 0 ? <MediaCard media={media || []} /> : null}
+
+          <PostStats {...stats} />
         </View>
       </View>
     </View>

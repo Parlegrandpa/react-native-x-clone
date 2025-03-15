@@ -4,16 +4,16 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 
 import CustomText from "../CustomText";
 import { RetweetedData } from "@/types/types";
-import { retweenColor } from "@/constants/Colors";
+import { generalColor } from "@/constants/Colors";
 
 const RetweetCard = ({ username }: RetweetedData) => {
   return (
     <View style={styles.container}>
-      <FontAwesome name={"retweet"} size={20} color={retweenColor} />
+      <FontAwesome name={"retweet"} size={20} color={generalColor} />
       <CustomText
         text={`${username} reposted`}
         isHeader
-        customStyle={{ color: retweenColor }}
+        customStyle={{ color: generalColor }}
       />
     </View>
   );
