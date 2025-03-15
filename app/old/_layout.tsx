@@ -35,7 +35,7 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ color, focused }) => (
-            <CustomIcon icon="home" color={color} focused={focused} />
+            <CustomIcon icon={icons.home} color={color} focused={focused} />
           ),
         }}
       />
@@ -45,11 +45,11 @@ export default function TabLayout() {
         options={{
           title: "Search",
           tabBarIcon: ({ color, focused }) => (
-            <CustomIcon icon="search" color={color} focused={focused} />
+            <CustomIcon icon={icons.search} color={color} focused={focused} />
           ),
         }}
       />
-      {/* 
+
       <Tabs.Screen
         name="grok"
         options={{
@@ -92,7 +92,7 @@ export default function TabLayout() {
             <CustomIcon icon={icons.messages} color={color} focused={focused} />
           ),
         }}
-      /> */}
+      />
     </Tabs>
   );
 }

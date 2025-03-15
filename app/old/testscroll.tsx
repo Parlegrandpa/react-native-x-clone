@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import {
   View,
   Text,
+  Animated,
   FlatList,
   StyleSheet,
   Image,
@@ -9,15 +10,8 @@ import {
   Alert,
   useWindowDimensions,
   useColorScheme,
-  Button,
 } from "react-native";
-import Animated, {
-  useSharedValue,
-  useAnimatedStyle,
-  withTiming,
-  withSpring,
-  useDerivedValue,
-} from "react-native-reanimated";
+import { TabView, SceneMap } from "react-native-tab-view";
 
 import images from "@/constants/images";
 import { ThemedText } from "@/components/ThemedText";
@@ -26,8 +20,6 @@ import TabComponent from "@/components/TabComponent";
 import CustomFlatList from "@/components/CustomFlatList";
 import { Colors } from "@/constants/Colors";
 import { useThemeColor } from "@/hooks/useThemeColor";
-import useScrollFade from "@/hooks/useScrollFade";
-import FloatingButton from "@/components/FloatingButton";
 
 const ScrollHeaderScreen = () => {
   const colorScheme = useColorScheme();
@@ -35,7 +27,49 @@ const ScrollHeaderScreen = () => {
   const backgroundColor = useThemeColor({}, "background");
   const textHeaderColor = useThemeColor({}, "textHeader");
 
-  const { onScroll, animatedHeaderStyle, headerHeight } = useScrollFade();
+  const scrollY = useRef(new Animated.Value(0)).current;
+  const lastOffset = useRef(0);
+  const headerOpacity = useRef(new Animated.Value(1)).current;
+  const headerHeight = 150; // Increased header height to accommodate both image and text
+  const fadeDuration = 200; // Adjust for smoothness
+
+  const onScroll = Animated.event(
+    [{ nativeEvent: { contentOffset: { y: scrollY } } }],
+    {
+      useNativeDriver: false,
+      listener: (event) => {
+        const currentOffset = event.nativeEvent.contentOffset.y;
+        const scrollingDown = currentOffset > lastOffset.current;
+        const scrollingUp = currentOffset < lastOffset.current;
+
+        if (scrollingDown) {
+          Animated.timing(headerOpacity, {
+            toValue: 0,
+            duration: fadeDuration,
+            useNativeDriver: true,
+          }).start();
+        } else if (scrollingUp) {
+          // Start fading out immediately when scrolling up
+          Animated.timing(headerOpacity, {
+            toValue: 0.5, // Set opacity to 0.5 as it starts to fade out
+            duration: fadeDuration,
+            useNativeDriver: true,
+          }).start();
+        }
+
+        if (currentOffset <= 0) {
+          // If at the top, ensure header is fully visible again
+          Animated.timing(headerOpacity, {
+            toValue: 1,
+            duration: fadeDuration,
+            useNativeDriver: true,
+          }).start();
+        }
+
+        lastOffset.current = currentOffset;
+      },
+    }
+  );
 
   return (
     <View style={styles.container}>
@@ -43,14 +77,13 @@ const ScrollHeaderScreen = () => {
         style={[
           styles.header,
           {
+            opacity: headerOpacity,
+            height: headerHeight,
             backgroundColor: backgroundColor,
-            ...animatedHeaderStyle,
           },
         ]}
       >
-        <View
-          style={[styles.headerContent, { backgroundColor: backgroundColor }]}
-        >
+        <View style={styles.headerContent}>
           <View
             style={[
               styles.headerSection,
@@ -71,7 +104,7 @@ const ScrollHeaderScreen = () => {
             onPress={() => Alert.alert("Upgrade")}
           >
             <CustomText
-              isHeader
+              isHeader={false}
               text="Upgrade"
               customStyle={[
                 styles.headerText,
@@ -80,16 +113,24 @@ const ScrollHeaderScreen = () => {
             />
           </TouchableOpacity>
         </View>
+        <View>
+          <CustomText
+            isHeader={false}
+            text="Upgrade"
+            customStyle={[
+              styles.headerText,
+              { color: textHeaderColor, borderColor: textHeaderColor },
+            ]}
+          />
+        </View>
+        {/* <TabComponent onScroll={onScroll} headerHeight={headerHeight} /> */}
       </Animated.View>
-
-      <TabComponent
-        onScroll={onScroll}
-        animatedHeaderStyle={animatedHeaderStyle}
-        headerHeight={headerHeight}
-        backgroundColor={backgroundColor}
+      <CustomFlatList
+        data={Array.from({ length: 50 }, (_, i) => `Item ${i + 1}`)}
+        customStyle={styles.item}
+        containerStyle={{ paddingTop: headerHeight }}
+        onScrollEvent={onScroll}
       />
-
-      <FloatingButton onPress={() => Alert.alert("Floating Button Pressed!")} />
     </View>
   );
 };
@@ -103,21 +144,27 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
-    // backgroundColor: "blue",
+    backgroundColor: "blue",
     justifyContent: "center",
     alignItems: "center",
     zIndex: 1000,
   },
   headerContent: {
+    flex: 1,
     width: "100%",
     padding: 16,
+    paddingTop: 40,
     flexDirection: "row",
+    // justifyContent: "space-between",
     alignItems: "center",
-    position: "absolute",
-    bottom: 0,
   },
+  // headerTextContainer: {
+  //   width: 70, // Set a fixed width (adjust as needed)
+  //   justifyContent: "center",
+  //   alignItems: "center",
+  // },
   headerSection: {
-    flex: 1,
+    flex: 1, // Each section takes equal space
     justifyContent: "center",
     alignItems: "center",
   },
@@ -140,6 +187,11 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 12,
     fontFamily: "Poppins-Bold",
+  },
+  item: {
+    padding: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: "#ddd",
   },
 });
 
