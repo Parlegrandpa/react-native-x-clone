@@ -22,6 +22,10 @@ export interface PostData {
   media?: MediaData[];
 }
 
+export interface SingleMediaData {
+  media: MediaData[];
+}
+
 export interface MediaData {
   type: MediaTypes;
   url: string;

@@ -15,6 +15,7 @@ import icons from "@/constants/icons";
 import { floatingColor } from "@/constants/Colors";
 import { PostData, SinglePostData } from "@/types/types";
 import { truncateUserName } from "@/utils/utils";
+import MediaCard from "./MediaCard";
 
 const ForYouItem = ({ data }: SinglePostData) => {
   const { accountName, username, postAt, media, bodyText } = data;
@@ -25,7 +26,7 @@ const ForYouItem = ({ data }: SinglePostData) => {
     <View style={styles.item}>
       <View style={{ flexDirection: "row", gap: 8 }}>
         <Image source={images.profile} style={styles.headerImage} />
-        <View style={{ gap: 4, flex: 1 }}>
+        <View style={{ flexDirection: "column", flex: 1, gap: 8 }}>
           <View
             style={{
               flexDirection: "row",
@@ -38,18 +39,25 @@ const ForYouItem = ({ data }: SinglePostData) => {
             <Image source={icons.verify} style={styles.verifyIcon} />
             <CustomText text={`@${username}`} />
             <CustomText text="- 12h" />
+            <TouchableOpacity
+              style={{
+                position: "absolute",
+                right: 0,
+              }}
+              activeOpacity={0.6}
+              onPress={() => Alert.alert("Ellips clicked")}
+            >
+              <Ionicons
+                name="ellipsis-horizontal-sharp"
+                size={24}
+                color="black"
+              />
+            </TouchableOpacity>
           </View>
-
           <CustomText text={bodyText} />
-        </View>
 
-        <TouchableOpacity
-          style={{}}
-          activeOpacity={0.6}
-          onPress={() => Alert.alert("Ellips clicked")}
-        >
-          <Ionicons name="ellipsis-horizontal-sharp" size={24} color="black" />
-        </TouchableOpacity>
+          {media && media.length > 0 ? <MediaCard media={media || []} /> : null}
+        </View>
       </View>
     </View>
   );
