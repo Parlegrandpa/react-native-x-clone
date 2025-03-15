@@ -9,7 +9,7 @@ import { floatingColor } from "@/constants/Colors";
 import ForYouTab from "./tabscreens/ForYouTab";
 import FollowingTab from "./tabscreens/FollowingTab";
 
-const TabComponent = ({
+const HomeTabComponent = ({
   onScroll,
   headerHeight,
   animatedHeaderStyle,
@@ -113,4 +113,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TabComponent;
+export default HomeTabComponent;

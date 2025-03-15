@@ -22,18 +22,21 @@ import Animated, {
 import images from "@/constants/images";
 import { ThemedText } from "@/components/ThemedText";
 import CustomText from "@/components/CustomText";
-import HomeTabComponent from "@/components/HomeTabComponent";
 import CustomFlatList from "@/components/CustomFlatList";
 import { Colors } from "@/constants/Colors";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import useScrollFade from "@/hooks/useScrollFade";
 import FloatingButton from "@/components/FloatingButton";
+import CustomIcon from "@/components/CustomIcon";
+import { MaterialIcons } from "@expo/vector-icons";
+import NotificationTabComponent from "@/components/NotificationTabComponent";
 
-const ScrollHeaderScreen = () => {
+const NotificationScreen = () => {
   const colorScheme = useColorScheme();
 
   const backgroundColor = useThemeColor({}, "background");
   const textHeaderColor = useThemeColor({}, "textHeader");
+  const tintColor = useThemeColor({}, "tint");
 
   const { onScroll, animatedHeaderStyle, headerHeight } = useScrollFade();
 
@@ -62,27 +65,36 @@ const ScrollHeaderScreen = () => {
             <Image source={images.profile} style={styles.headerImage} />
           </View>
           <View style={[styles.headerSection, { alignItems: "center" }]}>
-            <Image source={images.xLogo} style={styles.logoImage} />
+            <CustomText
+              isHeader
+              text="Notification"
+              customStyle={[
+                styles.headerText,
+                { color: textHeaderColor, fontSize: 16 },
+              ]}
+            />
           </View>
 
           <TouchableOpacity
             style={[styles.headerSection, { alignItems: "flex-end" }]}
             activeOpacity={0.6}
-            onPress={() => Alert.alert("Upgrade")}
+            onPress={() => Alert.alert("Setting")}
           >
-            <CustomText
+            {/* <CustomText
               isHeader
               text="Upgrade"
               customStyle={[
                 styles.headerText,
                 { color: textHeaderColor, borderColor: textHeaderColor },
               ]}
-            />
+            /> */}
+            {/* <CustomIcon icon="notifications-none" color={tintColor} /> */}
+            <MaterialIcons name="settings" size={30} color={tintColor} />
           </TouchableOpacity>
         </View>
       </Animated.View>
 
-      <HomeTabComponent
+      <NotificationTabComponent
         onScroll={onScroll}
         animatedHeaderStyle={animatedHeaderStyle}
         headerHeight={headerHeight}
@@ -143,4 +155,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ScrollHeaderScreen;
+export default NotificationScreen;

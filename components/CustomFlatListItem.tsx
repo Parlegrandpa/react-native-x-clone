@@ -1,20 +1,33 @@
-import { StyleSheet, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Alert,
+} from "react-native";
 import React, { useState } from "react";
 import { CustomFlatListItemProps } from "@/types/types";
 import PostCard from "./FlatListComponents/PostCard";
-const CustomFlatListItem = ({ listData, screen }: CustomFlatListItemProps) => {
-  // const renderItem = () => {
-  //   switch (screen) {
-  //     case "forYou":
-  //       return <ForYouItem data={listData} />;
-  //     // case "text":
-  //     //   return <TextItem listData={listData} />;
-  //     default:
-  //       return <ForYouItem data={listData} />;
-  //   }
-  // };
+import AllNotificationCard from "./FlatListComponents/AllNotificationCard";
+// import { SECONDARY_DEFAULT_COLOR, GREY_COLOR } from "@/constants/Colors";
+// import { icons } from "../constants";
+// import { CustomFlatListItemProps } from "@/types/types";
+// import { useVideoPlayer, VideoView } from "expo-video";
 
-  return <View style={styles.container}>{<PostCard data={listData} />}</View>;
+const CustomFlatListItem = ({ listData, screen }: CustomFlatListItemProps) => {
+  const renderItem = () => {
+    switch (screen) {
+      case "forYou":
+        return <PostCard data={listData} />;
+      case "allnotification":
+        return <AllNotificationCard data={listData} />;
+      default:
+        return <PostCard data={listData} />;
+    }
+  };
+
+  return <View style={styles.container}>{renderItem()}</View>;
 };
 
 export default CustomFlatListItem;

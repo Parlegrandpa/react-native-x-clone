@@ -48,7 +48,12 @@ export interface MediaData {
 
 export type MediaTypes = "video" | "image";
 
-export type ScreenTypes = "forYou" | "following" | "chelseaFan" | "default";
+export type ScreenTypes =
+  | "forYou"
+  | "following"
+  | "chelseaFan"
+  | "default"
+  | "allnotification";
 
 export interface CustomFlatListItemProps {
   listData: PostData;

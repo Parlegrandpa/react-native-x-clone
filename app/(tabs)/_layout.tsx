@@ -49,8 +49,8 @@ export default function TabLayout() {
           ),
         }}
       />
-      {/* 
-      <Tabs.Screen
+
+      {/* <Tabs.Screen
         name="grok"
         options={{
           title: "Grok",
@@ -58,9 +58,9 @@ export default function TabLayout() {
             <CustomIcon icon={icons.grok} color={color} focused={focused} />
           ),
         }}
-      />
+      /> */}
 
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="explore"
         options={{
           title: "Explore",
@@ -68,7 +68,7 @@ export default function TabLayout() {
             <CustomIcon icon={icons.explore} color={color} focused={focused} />
           ),
         }}
-      />
+      /> */}
 
       <Tabs.Screen
         name="notification"
@@ -76,7 +76,7 @@ export default function TabLayout() {
           title: "Notification",
           tabBarIcon: ({ color, focused }) => (
             <CustomIcon
-              icon={icons.notification}
+              icon="notifications-none"
               color={color}
               focused={focused}
             />
@@ -84,7 +84,7 @@ export default function TabLayout() {
         }}
       />
 
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="messages"
         options={{
           title: "Messages",

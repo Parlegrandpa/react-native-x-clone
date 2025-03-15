@@ -11,14 +11,10 @@ import {
   useWindowDimensions,
   useColorScheme,
 } from "react-native";
-import { TabView, SceneMap } from "react-native-tab-view";
 
 import images from "@/constants/images";
-import { ThemedText } from "@/components/ThemedText";
 import CustomText from "@/components/CustomText";
-import TabComponent from "@/components/TabComponent";
 import CustomFlatList from "@/components/CustomFlatList";
-import { Colors } from "@/constants/Colors";
 import { useThemeColor } from "@/hooks/useThemeColor";
 
 const ScrollHeaderScreen = () => {
