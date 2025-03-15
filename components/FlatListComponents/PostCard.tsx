@@ -21,7 +21,7 @@ import PostStats from "./PostStats";
 import { useContextMenu } from "@/hooks/useContextMenu";
 import PostMenuModal from "../PostMenuModal";
 
-const ForYouItem = ({ data }: SinglePostData) => {
+const PostCard = ({ data }: SinglePostData) => {
   const { isVisible, position, showMenu, hideMenu, handleMenuItemPress } =
     useContextMenu([
       {
@@ -109,7 +109,7 @@ const ForYouItem = ({ data }: SinglePostData) => {
   );
 };
 
-export default ForYouItem;
+export default PostCard;
 
 const styles = StyleSheet.create({
   text: { flex: 1 },

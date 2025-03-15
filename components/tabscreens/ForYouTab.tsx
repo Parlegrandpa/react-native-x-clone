@@ -31,8 +31,8 @@ const DATA = [
     },
   },
   {
-    accountName: "Fabrizio Romano",
-    username: "FabrizioRomano",
+    accountName: "Fadsafzio Vethtgfd",
+    username: "FayhdioRomano",
     postAt: "Wed, 20 Jan 2022 9:30 PM",
     bodyText:
       "🚨🔵 Chelsea keep working on deal to sign Dario Essugo from Sporting for the future. Talented midfielder is on BlueCo radar since January and relationship with Sporting remains excellent after Quenda deal.",
@@ -50,8 +50,8 @@ const DATA = [
     },
   },
   {
-    accountName: "Harrison A 🎯🎯🎯",
-    username: "harreceipts",
+    accountName: "Hadirson A 🎯🎯🎯",
+    username: "hadreceipts",
     postAt: "Wed, 20 Jan 2022 9:30 PM",
     bodyText:
       "Nothing concern me, just supporting the vawulence between  @BashirElRufai and @Omojuwa with receipts! Make we for dey understand 😂",
@@ -67,8 +67,8 @@ const DATA = [
     },
   },
   {
-    accountName: "MrBanks💰",
-    username: "Mrbankstips",
+    accountName: "DrBnks💰",
+    username: "Drbnkstips",
     postAt: "Wed, 20 Jan 2022 9:30 PM",
     bodyText:
       "Hi @grok, kindly provide 10 football teams capable of winning their matches today and make these selections from the English Premier League, Italian Serie A, French Ligue 1, German Bundesliga and Spanish La liga.",
@@ -98,8 +98,8 @@ const DATA = [
     },
   },
   {
-    accountName: "Instablog9ja",
-    username: "instablog9ja",
+    accountName: "Instlogjhja",
+    username: "instlogjhja",
     postAt: "Wed, 20 Jan 2022 9:30 PM",
     bodyText: "Cheating Allegations: Lande's wife clears the air",
     media: [

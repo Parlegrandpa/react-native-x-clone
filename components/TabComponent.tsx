@@ -7,24 +7,7 @@ import { useThemeColor } from "@/hooks/useThemeColor";
 import CustomText from "./CustomText";
 import { floatingColor } from "@/constants/Colors";
 import ForYouTab from "./tabscreens/ForYouTab";
-
-const DATA = Array.from({ length: 50 }, (_, i) => `Item ${i + 1}`);
-
-const SecondRoute = ({ onScroll, height, textBodyColor }: any) => {
-  return (
-    <View style={{ flex: 1 }}>
-      <Text style={{ color: textBodyColor }}>Second Route</Text>
-    </View>
-  );
-};
-
-const ThirdRoute = ({ onScroll, height, textBodyColor }: any) => {
-  return (
-    <View style={{ flex: 1 }}>
-      <Text style={{ color: textBodyColor }}>Third Route</Text>
-    </View>
-  );
-};
+import FollowingTab from "./tabscreens/FollowingTab";
 
 const TabComponent = ({
   onScroll,
@@ -68,8 +51,8 @@ const TabComponent = ({
 
   const renderScene = SceneMap({
     first: () => <ForYouTab onScroll={onScroll} height={headerHeight} />,
-    second: () => <SecondRoute onScroll={onScroll} height={headerHeight} />,
-    third: () => <ThirdRoute onScroll={onScroll} height={headerHeight} />,
+    second: () => <FollowingTab onScroll={onScroll} height={headerHeight} />,
+    third: () => <FollowingTab onScroll={onScroll} height={headerHeight} />,
   });
 
   return (
