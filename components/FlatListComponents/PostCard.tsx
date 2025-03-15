@@ -18,8 +18,23 @@ import { truncateUserName } from "@/utils/utils";
 import MediaCard from "./MediaCard";
 import RetweetCard from "./RetweetCard";
 import PostStats from "./PostStats";
+import { useContextMenu } from "@/hooks/useContextMenu";
+import PostMenuModal from "../PostMenuModal";
 
 const ForYouItem = ({ data }: SinglePostData) => {
+  const { isVisible, position, showMenu, hideMenu, handleMenuItemPress } =
+    useContextMenu([
+      {
+        label: "View Post Interactions",
+        callback: () => console.log("View interactions"),
+      },
+      { label: "Report Post", callback: () => console.log("Report post") },
+      {
+        label: "Request Community Note",
+        callback: () => console.log("Request note"),
+      },
+    ]);
+
   const { accountName, username, postAt, media, bodyText, retweeted, stats } =
     data;
 
@@ -50,7 +65,7 @@ const ForYouItem = ({ data }: SinglePostData) => {
                 right: 0,
               }}
               activeOpacity={0.6}
-              onPress={() => Alert.alert("Ellips clicked")}
+              onPress={showMenu}
             >
               <Ionicons
                 name="ellipsis-horizontal-sharp"
@@ -66,6 +81,30 @@ const ForYouItem = ({ data }: SinglePostData) => {
           <PostStats {...stats} />
         </View>
       </View>
+
+      <PostMenuModal
+        isVisible={isVisible}
+        position={position}
+        hideMenu={hideMenu}
+        handleMenuItemPress={handleMenuItemPress}
+        menuItems={[
+          {
+            label: "View Post Interactions",
+            callback: () => console.log("View interactions"),
+            icon: "bar-chart",
+          },
+          {
+            label: "Report Post",
+            callback: () => console.log("Report post"),
+            icon: "flag",
+          },
+          {
+            label: "Request Community Note",
+            callback: () => console.log("Request note"),
+            icon: "comment",
+          },
+        ]}
+      />
     </View>
   );
 };
@@ -75,6 +114,7 @@ export default ForYouItem;
 const styles = StyleSheet.create({
   text: { flex: 1 },
   item: {
+    flex: 1,
     padding: 20,
     borderBottomWidth: 1,
     borderBottomColor: "#ddd",

@@ -15,7 +15,6 @@ import ForYouItem from "./FlatListComponents/PostCard";
 // import { useVideoPlayer, VideoView } from "expo-video";
 
 const CustomFlatListItem = ({ listData, screen }: CustomFlatListItemProps) => {
-  console.log("listData", listData);
   const renderItem = () => {
     switch (screen) {
       case "forYou":
