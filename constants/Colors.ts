@@ -7,6 +7,7 @@ const tintColorLight = "#0f1318";
 const tintColorDark = "#d9d9d9";
 
 export const floatingColor = "#1e9af0";
+export const retweenColor = "#64696d";
 
 export const Colors = {
   light: {

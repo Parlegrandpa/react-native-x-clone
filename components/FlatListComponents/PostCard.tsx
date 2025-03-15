@@ -16,14 +16,17 @@ import { floatingColor } from "@/constants/Colors";
 import { PostData, SinglePostData } from "@/types/types";
 import { truncateUserName } from "@/utils/utils";
 import MediaCard from "./MediaCard";
+import RetweetCard from "./RetweetCard";
 
 const ForYouItem = ({ data }: SinglePostData) => {
-  const { accountName, username, postAt, media, bodyText } = data;
+  const { accountName, username, postAt, media, bodyText, retweeted } = data;
 
   const truncatedAccountName = truncateUserName(accountName);
 
   return (
     <View style={styles.item}>
+      {retweeted && <RetweetCard username={retweeted.username} />}
+
       <View style={{ flexDirection: "row", gap: 8 }}>
         <Image source={images.profile} style={styles.headerImage} />
         <View style={{ flexDirection: "column", flex: 1, gap: 8 }}>

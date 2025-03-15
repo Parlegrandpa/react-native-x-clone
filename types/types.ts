@@ -20,6 +20,11 @@ export interface PostData {
   postAt: string;
   bodyText: string;
   media?: MediaData[];
+  retweeted?: RetweetedData;
+}
+
+export interface RetweetedData {
+  username: string;
 }
 
 export interface SingleMediaData {

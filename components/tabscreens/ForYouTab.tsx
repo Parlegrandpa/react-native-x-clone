@@ -20,6 +20,9 @@ const DATA = [
         url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc9APxkj0xClmrU3PpMZglHQkx446nQPG6lA&s",
       },
     ],
+    retweeted: {
+      username: "Javas Goldsmith",
+    },
   },
   {
     accountName: "Fabrizio Romano",
@@ -41,6 +44,9 @@ const DATA = [
     bodyText:
       "Nothing concern me, just supporting the vawulence between  @BashirElRufai and @Omojuwa with receipts! Make we for dey understand 😂",
     media: [],
+    retweeted: {
+      username: "Paul Adebiyi",
+    },
   },
   {
     accountName: "MrBanks💰",
