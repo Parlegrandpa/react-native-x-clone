@@ -1,3 +1,5 @@
+import { XPostDataProps } from "@/types/datatypes";
+
 export const truncateUserName = (accountName: string) => {
   const maxAccountNameLength = 11;
   return accountName.length > maxAccountNameLength
@@ -18,4 +20,15 @@ export const formatNumber = (num: number) => {
       : formattedNum + "k";
   }
   return num.toString();
+};
+
+// Function to filter reposts with no content
+export const filterRepostsWithNoContent = (
+  posts: XPostDataProps[]
+): XPostDataProps[] => {
+  return posts.filter((item) => {
+    const isRepost = item.repostDetails && item.repostDetails.isRepost === true;
+    const hasNoContent = item.post.content === "";
+    return isRepost && hasNoContent;
+  });
 };

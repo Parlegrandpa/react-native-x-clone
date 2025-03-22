@@ -1,6 +1,6 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { CustomFlatListProps } from "@/types/types";
+import { CustomFlatListProps } from "@/types/datatypes";
 import CustomFlatListItem from "./CustomFlatListItem";
 
 const CustomFlatList = ({

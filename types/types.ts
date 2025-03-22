@@ -1,52 +1,13 @@
 import { NativeSyntheticEvent, NativeTouchEvent } from "react-native";
+import { PostDetailProps, XPostDataProps } from "./datatypes";
+
+export interface XPostData {}
 
 export interface IconData {
   icon: number;
   color: any;
   focused: boolean;
 }
-
-export interface CustomFlatListProps {
-  data: PostData[];
-  onScrollEvent?: any;
-  screen?: ScreenTypes;
-}
-
-export interface SinglePostData {
-  data: PostData;
-}
-
-export interface PostData {
-  accountName: string;
-  username: string;
-  postAt: string;
-  bodyText: string;
-  media?: MediaData[];
-  retweeted?: RetweetedData;
-  stats: StatsData;
-}
-
-export interface RetweetedData {
-  username: string;
-}
-
-export interface StatsData {
-  comments: number;
-  retweets: number;
-  likes: number;
-  views: number;
-}
-
-export interface SingleMediaData {
-  media: MediaData[];
-}
-
-export interface MediaData {
-  type: MediaTypes;
-  url: string;
-}
-
-export type MediaTypes = "video" | "image";
 
 export type ScreenTypes =
   | "forYou"
@@ -56,7 +17,7 @@ export type ScreenTypes =
   | "allnotification";
 
 export interface CustomFlatListItemProps {
-  listData: PostData;
+  listData: XPostDataProps;
   screen: string;
 }
 
@@ -74,6 +35,7 @@ export interface Position {
 // Define the shape of a menu item
 export interface MenuItem {
   label: string;
+  icon: any;
   callback?: () => void;
 }
 

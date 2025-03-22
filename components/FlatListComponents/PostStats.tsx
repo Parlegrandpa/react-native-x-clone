@@ -1,26 +1,26 @@
-import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Alert, StyleSheet, TouchableOpacity, View } from "react-native";
 import React from "react";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
 import MiniStats from "./MiniStats";
-import { StatsData } from "@/types/types";
+import { StatsDataProps } from "@/types/datatypes";
 import { formatNumber } from "@/utils/utils";
 
-const PostStats = (stats: StatsData) => {
-  const { comments, likes, retweets, views } = stats;
+const PostStats = ({data}: StatsDataProps) => {
+  const { replies, likes, reposts, views } = data;
+
   return (
     <View style={styles.container}>
       <TouchableOpacity
         activeOpacity={0.6}
         onPress={() => Alert.alert("Comments clicked")}
       >
-        <MiniStats icon={"comment-o"} value={formatNumber(comments)} />
+        <MiniStats icon={"comment-o"} value={formatNumber(replies)} />
       </TouchableOpacity>
 
       <TouchableOpacity
         activeOpacity={0.6}
         onPress={() => Alert.alert("Retweet clicked")}
       >
-        <MiniStats icon={"retweet"} value={formatNumber(retweets)} />
+        <MiniStats icon={"retweet"} value={formatNumber(reposts)} />
       </TouchableOpacity>
 
       <TouchableOpacity

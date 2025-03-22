@@ -34,7 +34,7 @@ const CustomText = ({
 };
 
 const styles = StyleSheet.create({
-  bodyStyle: { fontSize: 14, fontFamily: "Poppins-Medium" },
+  bodyStyle: { fontSize: 14, fontFamily: "Poppins-Regular" },
   headerText: { fontSize: 14, fontFamily: "Poppins-Bold" },
 });
 export default CustomText;

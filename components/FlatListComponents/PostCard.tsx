@@ -13,36 +13,44 @@ import images from "@/constants/images";
 import CustomText from "../CustomText";
 import icons from "@/constants/icons";
 import { floatingColor } from "@/constants/Colors";
-import { SinglePostData } from "@/types/types";
 import { truncateUserName } from "@/utils/utils";
 import MediaCard from "./MediaCard";
 import RetweetCard from "./RetweetCard";
 import PostStats from "./PostStats";
 import { useContextMenu } from "@/hooks/useContextMenu";
 import PostMenuModal from "../PostMenuModal";
+import { SinglePostData } from "@/types/datatypes";
+import PostContentContainer from "./PostContentContainer";
 
 const PostCard = ({ data }: SinglePostData) => {
   const { isVisible, position, showMenu, hideMenu, handleMenuItemPress } =
-    useContextMenu([
-      {
-        label: "View Post Interactions",
-        callback: () => console.log("View interactions"),
-      },
-      { label: "Report Post", callback: () => console.log("Report post") },
-      {
-        label: "Request Community Note",
-        callback: () => console.log("Request note"),
-      },
-    ]);
+    useContextMenu([]);
 
-  const { accountName, username, postAt, media, bodyText, retweeted, stats } =
-    data;
+  const { post, repostDetails } = data;
+  const { author, content, createdAt, stats, media } = post;
+  const { displayName, username } = author;
 
-  const truncatedAccountName = truncateUserName(accountName);
+  let newPost;
+  let subPost;
+
+  if (repostDetails && repostDetails.isRepost === true) {
+    if (post.content === "") {
+      newPost = repostDetails.originalPost;
+    } else {
+      newPost = post;
+      subPost = repostDetails.originalPost;
+    }
+  } else {
+    newPost = post;
+  }
+
+  const truncatedAccountName = truncateUserName(newPost.author.displayName);
 
   return (
     <View style={styles.item}>
-      {retweeted && <RetweetCard username={retweeted.username} />}
+      {repostDetails &&
+        repostDetails.isRepost === true &&
+        post.content === "" && <RetweetCard username={post.author.username} />}
 
       <View style={{ flexDirection: "row", gap: 8 }}>
         <Image source={images.profile} style={styles.headerImage} />
@@ -57,7 +65,7 @@ const PostCard = ({ data }: SinglePostData) => {
           >
             <CustomText text={truncatedAccountName} isHeader />
             <Image source={icons.verify} style={styles.verifyIcon} />
-            <CustomText text={`@${username}`} />
+            <CustomText text={`@${newPost.author.username}`} />
             <CustomText text="- 12h" />
             <TouchableOpacity
               style={{
@@ -74,11 +82,13 @@ const PostCard = ({ data }: SinglePostData) => {
               />
             </TouchableOpacity>
           </View>
-          <CustomText text={bodyText} />
+          <CustomText text={newPost.content} />
 
           {media && media.length > 0 ? <MediaCard media={media || []} /> : null}
 
-          <PostStats {...stats} />
+          {subPost && <PostContentContainer post={subPost} />}
+
+          {stats && <PostStats data={stats} />}
         </View>
       </View>
 

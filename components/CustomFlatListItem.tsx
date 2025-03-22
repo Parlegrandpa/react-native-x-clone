@@ -20,8 +20,8 @@ const CustomFlatListItem = ({ listData, screen }: CustomFlatListItemProps) => {
     switch (screen) {
       case "forYou":
         return <PostCard data={listData} />;
-      case "allnotification":
-        return <AllNotificationCard data={listData} />;
+      // case "allnotification":
+      //   return <AllNotificationCard data={listData} />;
       default:
         return <PostCard data={listData} />;
     }

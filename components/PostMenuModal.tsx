@@ -75,17 +75,17 @@ const PostMenuModal = ({
             {
               label: "View Post Interactions",
               callback: () => console.log("View interactions"),
-              icon: "bar-chart-o",
+              icon: "bar-chart" as const,
             },
             {
               label: "Report Post",
               callback: () => console.log("Report post"),
-              icon: "flag-o",
+              icon: "flag" as const,
             },
             {
               label: "Request Community Note",
               callback: () => console.log("Request note"),
-              icon: "bell-o",
+              icon: "bell" as const,
             },
           ].map((item, index) => (
             <TouchableOpacity

@@ -1,0 +1,865 @@
+[
+  {
+    "post": {
+      "id": "p1",
+      "content": "Just got back from a hike and wow, the sunset was absolutely breathtaking tonight! Nature never fails to amaze me. #nature #sunsetvibes",
+      "createdAt": "2025-03-16T18:30:00Z",
+      "author": {
+        "id": "u1",
+        "username": "naturelover",
+        "displayName": "Jane Doe",
+        "profileImage": "https://example.com/jane.jpg"
+      },
+      "stats": {
+        "likes": 45,
+        "reposts": 12,
+        "replies": 3,
+        "views": 250
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+        },
+        {
+          "type": "image",
+          "url": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+        }
+      ],
+      "replies": {
+        "replies": {
+          "id": "r1",
+          "content": "Wow, that’s stunning! Where was this taken?",
+          "createdAt": "2025-03-16T18:35:00Z",
+          "author": {
+            "id": "u2",
+            "username": "skywatcher",
+            "displayName": "Sky Watcher",
+            "profileImage": "https://example.com/skywatcher.jpg"
+          },
+          "stats": {
+            "likes": 10,
+            "reposts": 2,
+            "replies": 0,
+            "views": 80
+          },
+          "media": []
+        },
+        "likes": 15
+      }
+    }
+  },
+  {
+    "post": {
+      "id": "p2",
+      "content": "Hey everyone, what are your thoughts on artificial intelligence these days? It’s advancing so fast, I can barely keep up! #AI #tech",
+      "createdAt": "2025-03-15T10:00:00Z",
+      "author": {
+        "id": "u3",
+        "username": "techguy",
+        "displayName": "Tom Tech",
+        "profileImage": "https://example.com/tomtech.jpg"
+      },
+      "stats": {
+        "likes": 23,
+        "reposts": 5,
+        "replies": 0,
+        "views": 150
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "https://media.gettyimages.com/id/1472335476/photo/digitally-generated-image-of-isometric-data-chart.jpg?s=612x612&w=gi&k=20&c=UVxyAlLZj-F7VtVjYJ4CtRuTF7bY2rNxjbsNYsxdIbA="
+        }
+      ]
+    }
+  },
+  {
+    "post": {
+      "id": "p3",
+      "content": "",
+      "createdAt": "2025-03-17T09:15:00Z",
+      "author": {
+        "id": "u4",
+        "username": "videoguru",
+        "displayName": "Video Guru",
+        "profileImage": "https://example.com/guru.jpg"
+      },
+      "stats": {
+        "likes": 78,
+        "reposts": 20,
+        "replies": 2,
+        "views": 500
+      },
+      "media": []
+    },
+    "repostDetails": {
+      "isRepost": true,
+      "originalPost": {
+        "id": "p4",
+        "content": "You all need to check out this insanely cool video I found—it’s got everything: action, humor, and great editing! #video #mustwatch",
+        "createdAt": "2025-03-16T14:00:00Z",
+        "author": {
+          "id": "u5",
+          "username": "creatorx",
+          "displayName": "Creator X",
+          "profileImage": "https://example.com/creatorx.jpg"
+        },
+        "stats": {
+          "likes": 150,
+          "reposts": 40,
+          "replies": 5,
+          "views": 1200
+        },
+        "media": [
+          {
+            "type": "image",
+            "url": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+          },
+          {
+            "type": "image",
+            "url": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+          },
+          {
+            "type": "image",
+            "url": "https://media.gettyimages.com/id/1472335476/photo/digitally-generated-image-of-isometric-data-chart.jpg?s=612x612&w=gi&k=20&c=UVxyAlLZj-F7VtVjYJ4CtRuTF7bY2rNxjbsNYsxdIbA="
+          }
+        ]
+      }
+    }
+  },
+  {
+    "post": {
+      "id": "p5",
+      "content": "Here’s a simple text post because I’m feeling chill today and don’t have much to say—hope you’re all having a good one!",
+      "createdAt": "2025-03-17T12:00:00Z",
+      "author": {
+        "id": "u6",
+        "username": "plainjane",
+        "displayName": "Jane Plain",
+        "profileImage": "https://example.com/plainjane.jpg"
+      },
+      "stats": {
+        "likes": 5,
+        "reposts": 1,
+        "replies": 0,
+        "views": 40
+      },
+      "media": []
+    }
+  },
+  {
+    "post": {
+      "id": "p6",
+      "content": "I’m absolutely loving this GIF right now—it’s making my day so much better! Anyone else a fan of silly animations? #giflife",
+      "createdAt": "2025-03-16T20:00:00Z",
+      "author": {
+        "id": "u7",
+        "username": "gifmaster",
+        "displayName": "GIF Master",
+        "profileImage": "https://example.com/gifmaster.jpg"
+      },
+      "stats": {
+        "likes": 30,
+        "reposts": 8,
+        "replies": 1,
+        "views": 200
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+        }
+      ]
+    }
+  },
+  {
+    "post": {
+      "id": "p7",
+      "content": "Spending my afternoon debating politics with friends online—things are getting heated! What’s your take on the latest news? #politics",
+      "createdAt": "2025-03-17T14:20:00Z",
+      "author": {
+        "id": "u8",
+        "username": "politicoguy",
+        "displayName": "Poli Guy",
+        "profileImage": "https://example.com/politicoguy.jpg"
+      },
+      "stats": {
+        "likes": 60,
+        "reposts": 15,
+        "replies": 10,
+        "views": 400
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "https://media.gettyimages.com/id/1472335476/photo/digitally-generated-image-of-isometric-data-chart.jpg?s=612x612&w=gi&k=20&c=UVxyAlLZj-F7VtVjYJ4CtRuTF7bY2rNxjbsNYsxdIbA="
+        },
+        {
+          "type": "image",
+          "url": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        },
+        {
+          "type": "image",
+          "url": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+        }
+      ],
+      "replies": {
+        "replies": {
+          "id": "r2",
+          "content": "I totally disagree with your stance—here’s why...",
+          "createdAt": "2025-03-17T14:25:00Z",
+          "author": {
+            "id": "u9",
+            "username": "debater",
+            "displayName": "Debater",
+            "profileImage": "https://example.com/debater.jpg"
+          },
+          "stats": {
+            "likes": 20,
+            "reposts": 3,
+            "replies": 2,
+            "views": 150
+          },
+          "media": [
+            {
+              "type": "image",
+              "url": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+            }
+          ]
+        },
+        "likes": 25
+      }
+    }
+  },
+  {
+    "post": {
+      "id": "p8",
+      "content": "Here’s a random thought of the day: why do we park on driveways and drive on parkways? Just something to ponder!",
+      "createdAt": "2025-03-15T22:00:00Z",
+      "author": {
+        "id": "u10",
+        "username": "thinker",
+        "displayName": "The Thinker",
+        "profileImage": "https://example.com/thinker.jpg"
+      },
+      "stats": {
+        "likes": 12,
+        "reposts": 2,
+        "replies": 0,
+        "views": 90
+      },
+      "media": []
+    }
+  },
+  {
+    "post": {
+      "id": "p9",
+      "content": "Snapped two amazing photos today and I couldn’t wait to share them with you all—check these out! #photography #nature",
+      "createdAt": "2025-03-17T08:00:00Z",
+      "author": {
+        "id": "u11",
+        "username": "photofan",
+        "displayName": "Photo Fan",
+        "profileImage": "https://example.com/photofan.jpg"
+      },
+      "stats": {
+        "likes": 90,
+        "reposts": 25,
+        "replies": 4,
+        "views": 600
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+        },
+        {
+          "type": "image",
+          "url": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+        }
+      ]
+    }
+  },
+  {
+    "post": {
+      "id": "p10",
+      "content": "",
+      "createdAt": "2025-03-16T16:00:00Z",
+      "author": {
+        "id": "u12",
+        "username": "reposter",
+        "displayName": "Repost King",
+        "profileImage": "https://example.com/reposter.jpg"
+      },
+      "stats": {
+        "likes": 35,
+        "reposts": 10,
+        "replies": 0,
+        "views": 220
+      },
+      "media": []
+    },
+    "repostDetails": {
+      "isRepost": true,
+      "originalPost": {
+        "id": "p11",
+        "content": "Found this absolute gem of a post earlier today and had to share it with you all—it’s pure gold! #hiddenfind",
+        "createdAt": "2025-03-15T12:00:00Z",
+        "author": {
+          "id": "u13",
+          "username": "originalposter",
+          "displayName": "Original Poster",
+          "profileImage": "https://example.com/originalposter.jpg"
+        },
+        "stats": {
+          "likes": 200,
+          "reposts": 50,
+          "replies": 8,
+          "views": 1500
+        },
+        "media": [
+          {
+            "type": "image",
+            "url": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "post": {
+      "id": "p12",
+      "content": "It’s coffee time, folks! Nothing beats a strong brew to kickstart the day—anyone else obsessed with caffeine? #coffee",
+      "createdAt": "2025-03-17T07:30:00Z",
+      "author": {
+        "id": "u14",
+        "username": "coffeelover",
+        "displayName": "Coffee Lover",
+        "profileImage": "https://example.com/coffeelover.jpg"
+      },
+      "stats": {
+        "likes": 15,
+        "reposts": 3,
+        "replies": 1,
+        "views": 100
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+        }
+      ]
+    }
+  },
+  {
+    "post": {
+      "id": "p13",
+      "content": "Went to an incredible concert last night and I’m still buzzing—here’s a clip to share the vibes with you all! #music",
+      "createdAt": "2025-03-16T09:00:00Z",
+      "author": {
+        "id": "u15",
+        "username": "musicfan",
+        "displayName": "Music Fan",
+        "profileImage": "https://example.com/musicfan.jpg"
+      },
+      "stats": {
+        "likes": 65,
+        "reposts": 18,
+        "replies": 2,
+        "views": 450
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+        },
+        {
+          "type": "image",
+          "url": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        },
+        {
+          "type": "image",
+          "url": "https://media.gettyimages.com/id/1472335476/photo/digitally-generated-image-of-isometric-data-chart.jpg?s=612x612&w=gi&k=20&c=UVxyAlLZj-F7VtVjYJ4CtRuTF7bY2rNxjbsNYsxdIbA="
+        },
+        {
+          "type": "image",
+          "url": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+        }
+      ]
+    }
+  },
+  {
+    "post": {
+      "id": "p14",
+      "content": "Enjoying a super quiet morning today—perfect time to sip tea and just soak in the calm before the storm. #peace",
+      "createdAt": "2025-03-17T06:00:00Z",
+      "author": {
+        "id": "u16",
+        "username": "calmguy",
+        "displayName": "Calm Guy",
+        "profileImage": "https://example.com/calmguy.jpg"
+      },
+      "stats": {
+        "likes": 8,
+        "reposts": 1,
+        "replies": 0,
+        "views": 60
+      },
+      "media": []
+    }
+  },
+  {
+    "post": {
+      "id": "p15",
+      "content": "Alert: I’ve got a hilarious meme to share with you all—it’s cracking me up over here! #meme #funny",
+      "createdAt": "2025-03-16T15:00:00Z",
+      "author": {
+        "id": "u17",
+        "username": "memelord",
+        "displayName": "Meme Lord",
+        "profileImage": "https://example.com/memelord.jpg"
+      },
+      "stats": {
+        "likes": 120,
+        "reposts": 30,
+        "replies": 5,
+        "views": 800
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        },
+        {
+          "type": "image",
+          "url": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+        }
+      ],
+      "replies": {
+        "replies": {
+          "id": "r3",
+          "content": "LOL this is so true—made my day!",
+          "createdAt": "2025-03-16T15:05:00Z",
+          "author": {
+            "id": "u18",
+            "username": "laugher",
+            "displayName": "Laugher",
+            "profileImage": "https://example.com/laugher.jpg"
+          },
+          "stats": {
+            "likes": 25,
+            "reposts": 4,
+            "replies": 1,
+            "views": 180
+          },
+          "media": [
+            {
+              "type": "image",
+              "url": "https://media.gettyimages.com/id/1472335476/photo/digitally-generated-image-of-isometric-data-chart.jpg?s=612x612&w=gi&k=20&c=UVxyAlLZj-F7VtVjYJ4CtRuTF7bY2rNxjbsNYsxdIbA="
+            }
+          ]
+        },
+        "likes": 30
+      }
+    }
+  },
+  {
+    "post": {
+      "id": "p16",
+      "content": "",
+      "createdAt": "2025-03-17T11:00:00Z",
+      "author": {
+        "id": "u19",
+        "username": "silentposter",
+        "displayName": "Silent Poster",
+        "profileImage": "https://example.com/silentposter.jpg"
+      },
+      "stats": {
+        "likes": 40,
+        "reposts": 12,
+        "replies": 0,
+        "views": 280
+      },
+      "media": []
+    },
+    "repostDetails": {
+      "isRepost": true,
+      "originalPost": {
+        "id": "p17",
+        "content": "This post really deserves way more attention than it’s getting—such a great take! #underrated",
+        "createdAt": "2025-03-16T10:00:00Z",
+        "author": {
+          "id": "u20",
+          "username": "spotlighter",
+          "displayName": "Spotlighter",
+          "profileImage": "https://example.com/spotlighter.jpg"
+        },
+        "stats": {
+          "likes": 180,
+          "reposts": 45,
+          "replies": 6,
+          "views": 1300
+        },
+        "media": [
+          {
+            "type": "image",
+            "url": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+          },
+          {
+            "type": "image",
+            "url": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+          },
+          {
+            "type": "image",
+            "url": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "post": {
+      "id": "p18",
+      "content": "Been coding all night long and I’m still not done—send help or coffee, please! #programming #late",
+      "createdAt": "2025-03-17T03:00:00Z",
+      "author": {
+        "id": "u21",
+        "username": "coderx",
+        "displayName": "Coder X",
+        "profileImage": "https://example.com/coderx.jpg"
+      },
+      "stats": {
+        "likes": 25,
+        "reposts": 6,
+        "replies": 2,
+        "views": 170
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "https://media.gettyimages.com/id/1472335476/photo/digitally-generated-image-of-isometric-data-chart.jpg?s=612x612&w=gi&k=20&c=UVxyAlLZj-F7VtVjYJ4CtRuTF7bY2rNxjbsNYsxdIbA="
+        }
+      ]
+    }
+  },
+  {
+    "post": {
+      "id": "p19",
+      "content": "Tried a brand-new recipe tonight and it turned out amazing—here’s a pic of the deliciousness! #foodie",
+      "createdAt": "2025-03-16T19:00:00Z",
+      "author": {
+        "id": "u22",
+        "username": "foodie",
+        "displayName": "Foodie",
+        "profileImage": "https://example.com/foodie.jpg"
+      },
+      "stats": {
+        "likes": 50,
+        "reposts": 10,
+        "replies": 3,
+        "views": 350
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+        },
+        {
+          "type": "image",
+          "url": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "post": {
+      "id": "p20",
+      "content": "The weather’s absolutely perfect today—sunny, breezy, and just right for a walk! #springvibes",
+      "createdAt": "2025-03-17T13:00:00Z",
+      "author": {
+        "id": "u23",
+        "username": "sunnydays",
+        "displayName": "Sunny Days",
+        "profileImage": "https://example.com/sunnydays.jpg"
+      },
+      "stats": {
+        "likes": 20,
+        "reposts": 4,
+        "replies": 0,
+        "views": 140
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "post": {
+      "id": "p21",
+      "content": "Found this stunning piece of art and had to repost it—too beautiful not to share! #art",
+      "createdAt": "2025-03-16T17:00:00Z",
+      "author": {
+        "id": "u24",
+        "username": "artlover",
+        "displayName": "Art Lover",
+        "profileImage": "https://example.com/artlover.jpg"
+      },
+      "stats": {
+        "likes": 55,
+        "reposts": 15,
+        "replies": 1,
+        "views": 380
+      },
+      "media": []
+    },
+    "repostDetails": {
+      "isRepost": true,
+      "originalPost": {
+        "id": "p22",
+        "content": "Created this artwork today and I’m so proud—hope you all love it as much as I do! #artist",
+        "createdAt": "2025-03-15T14:00:00Z",
+        "author": {
+          "id": "u25",
+          "username": "artistx",
+          "displayName": "Artist X",
+          "profileImage": "https://example.com/artistx.jpg"
+        },
+        "stats": {
+          "likes": 300,
+          "reposts": 80,
+          "replies": 10,
+          "views": 2000
+        },
+        "media": [
+          {
+            "type": "image",
+            "url": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+          },
+          {
+            "type": "image",
+            "url": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+          },
+          {
+            "type": "image",
+            "url": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+          },
+          {
+            "type": "image",
+            "url": "https://media.gettyimages.com/id/1472335476/photo/digitally-generated-image-of-isometric-data-chart.jpg?s=612x612&w=gi&k=20&c=UVxyAlLZj-F7VtVjYJ4CtRuTF7bY2rNxjbsNYsxdIbA="
+          }
+        ]
+      }
+    }
+  },
+  {
+    "post": {
+      "id": "p23",
+      "content": "Hosting a game night with friends tonight and it’s already a blast—anyone got board game recs? #gamenight",
+      "createdAt": "2025-03-16T21:00:00Z",
+      "author": {
+        "id": "u26",
+        "username": "gamer",
+        "displayName": "Gamer",
+        "profileImage": "https://example.com/gamer.jpg"
+      },
+      "stats": {
+        "likes": 35,
+        "reposts": 8,
+        "replies": 2,
+        "views": 240
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        }
+      ]
+    }
+  },
+  {
+    "post": {
+      "id": "p24",
+      "content": "",
+      "createdAt": "2025-03-17T10:00:00Z",
+      "author": {
+        "id": "u27",
+        "username": "quietreposter",
+        "displayName": "Quiet Reposter",
+        "profileImage": "https://example.com/quietreposter.jpg"
+      },
+      "stats": {
+        "likes": 25,
+        "reposts": 7,
+        "replies": 0,
+        "views": 180
+      },
+      "media": []
+    },
+    "repostDetails": {
+      "isRepost": true,
+      "originalPost": {
+        "id": "p25",
+        "content": "Here’s a hilarious joke I heard today: Why don’t skeletons fight each other? Because they don’t have the guts! #joke",
+        "createdAt": "2025-03-16T08:00:00Z",
+        "author": {
+          "id": "u28",
+          "username": "joker",
+          "displayName": "Joker",
+          "profileImage": "https://example.com/joker.jpg"
+        },
+        "stats": {
+          "likes": 140,
+          "reposts": 35,
+          "replies": 4,
+          "views": 900
+        },
+        "media": [
+          {
+            "type": "image",
+            "url": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+          },
+          {
+            "type": "image",
+            "url": "https://media.gettyimages.com/id/1472335476/photo/digitally-generated-image-of-isometric-data-chart.jpg?s=612x612&w=gi&k=20&c=UVxyAlLZj-F7VtVjYJ4CtRuTF7bY2rNxjbsNYsxdIbA="
+          }
+        ]
+      }
+    }
+  },
+  {
+    "post": {
+      "id": "p26",
+      "content": "Finished my morning run and I’m feeling unstoppable—nothing like fresh air to start the day right! #fitness",
+      "createdAt": "2025-03-17T07:00:00Z",
+      "author": {
+        "id": "u29",
+        "username": "runner",
+        "displayName": "Runner",
+        "profileImage": "https://example.com/runner.jpg"
+      },
+      "stats": {
+        "likes": 18,
+        "reposts": 3,
+        "replies": 1,
+        "views": 120
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "post": {
+      "id": "p27",
+      "content": "Cats are honestly the best companions—here’s a GIF of mine being adorable as usual! #catlife",
+      "createdAt": "2025-03-16T12:00:00Z",
+      "author": {
+        "id": "u30",
+        "username": "catlady",
+        "displayName": "Cat Lady",
+        "profileImage": "https://example.com/catlady.jpg"
+      },
+      "stats": {
+        "likes": 80,
+        "reposts": 20,
+        "replies": 3,
+        "views": 550
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        },
+        {
+          "type": "image",
+          "url": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+        },
+        {
+          "type": "image",
+          "url": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "post": {
+      "id": "p28",
+      "content": "Having some late-night thoughts about life and where it’s all heading—anyone else up pondering the universe?",
+      "createdAt": "2025-03-17T01:00:00Z",
+      "author": {
+        "id": "u31",
+        "username": "nightthinker",
+        "displayName": "Night Thinker",
+        "profileImage": "https://example.com/nightthinker.jpg"
+      },
+      "stats": {
+        "likes": 10,
+        "reposts": 2,
+        "replies": 0,
+        "views": 70
+      },
+      "media": []
+    }
+  },
+  {
+    "post": {
+      "id": "p29",
+      "content": "Big travel plans are incoming and I’m so excited to explore new places—where should I go first? #travel",
+      "createdAt": "2025-03-16T13:00:00Z",
+      "author": {
+        "id": "u32",
+        "username": "traveler",
+        "displayName": "Traveler",
+        "profileImage": "https://example.com/traveler.jpg"
+      },
+      "stats": {
+        "likes": 45,
+        "reposts": 12,
+        "replies": 2,
+        "views": 300
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+        },
+        {
+          "type": "image",
+          "url": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        }
+      ]
+    }
+  },
+  {
+    "post": {
+      "id": "p30",
+      "content": "Wrapping up the day with this last post—hope you all had a great one out there! #goodnight",
+      "createdAt": "2025-03-17T23:00:00Z",
+      "author": {
+        "id": "u33",
+        "username": "nightowl",
+        "displayName": "Night Owl",
+        "profileImage": "https://example.com/nightowl.jpg"
+      },
+      "stats": {
+        "likes": 18,
+        "reposts": 4,
+        "replies": 1,
+        "views": 130
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+        }
+      ]
+    }
+  }
+]

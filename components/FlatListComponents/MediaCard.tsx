@@ -7,9 +7,9 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import { SingleMediaData } from "@/types/types";
+import { MediaCardProps } from "@/types/datatypes";
 
-const MediaCard = ({ media }: SingleMediaData) => {
+const MediaCard = ({ media }: MediaCardProps) => {
   const renderImages = () => {
     const imageCount = Math.min(media.length, 4);
 
@@ -30,24 +30,31 @@ const MediaCard = ({ media }: SingleMediaData) => {
       case 2:
         return (
           <View style={styles.row}>
-            {media.slice(0, 2).map((img, index) => (
-              <TouchableOpacity
-                key={index}
-                activeOpacity={0.6}
-                style={styles.half}
-                onPress={() => Alert.alert("Image clicked is = ", img.url)}
-              >
-                <Image
-                  key={index}
-                  source={{ uri: img.url }}
-                  style={[
-                    styles.image,
-                    { flex: 1 },
-                    index === 0 ? { marginRight: 2 } : { marginLeft: 2 },
-                  ]}
-                />
-              </TouchableOpacity>
-            ))}
+            {media
+              .slice(0, 2)
+              .map(
+                (
+                  img: { url: string | undefined },
+                  index: React.Key | null | undefined
+                ) => (
+                  <TouchableOpacity
+                    key={index}
+                    activeOpacity={0.6}
+                    style={styles.half}
+                    onPress={() => Alert.alert("Image clicked is = ", img.url)}
+                  >
+                    <Image
+                      key={index}
+                      source={{ uri: img.url }}
+                      style={[
+                        styles.image,
+                        { flex: 1 },
+                        index === 0 ? { marginRight: 2 } : { marginLeft: 2 },
+                      ]}
+                    />
+                  </TouchableOpacity>
+                )
+              )}
           </View>
         );
       case 3:
@@ -65,7 +72,7 @@ const MediaCard = ({ media }: SingleMediaData) => {
             </TouchableOpacity>
 
             <View style={styles.row}>
-              {media.slice(1, 3).map((img, index) => (
+              {media.slice(1, 3).map((img: { url: string }, index: number) => (
                 <TouchableOpacity
                   key={index}
                   activeOpacity={0.6}
@@ -89,7 +96,7 @@ const MediaCard = ({ media }: SingleMediaData) => {
       case 4:
         return (
           <View style={styles.grid}>
-            {media.slice(0, 4).map((img, index) => (
+            {media.slice(0, 4).map((img: { url: string }, index: number) => (
               <TouchableOpacity
                 key={index}
                 activeOpacity={0.6}
@@ -146,8 +153,8 @@ const styles = StyleSheet.create({
     height: "50%",
   },
   quarter: {
-    width: "49%",
-    height: "49%",
+    width: "50%",
+    height: "50%",
   },
   row: {
     flexDirection: "row",
